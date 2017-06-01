@@ -12,5 +12,12 @@
     "url": "https://composer.gutools.co.uk",
     "github": "https://github.com/guardian/flexible-content",
     "contact": "digitalcms.dev@theguardian.com"
+  },
+  {
+    "name": "The Grid",
+    "description": "Managing Images",
+    "url": "https://media.gutools.co.uk",
+    "github": "https://github.com/guardian/grid",
+    "contact": "thegrid.dev@theguardian.com"
   }
 ]
