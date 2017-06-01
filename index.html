@@ -1,0 +1,48 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <h1>Editorial Tools Index</h1>
+    <ul id="tools-list"></ul>
+
+    <template id="tool-template">
+        <li>
+            <a href="" class="tool--link" target="_blank" rel="noopener noreferrer"></a>
+            <span class="tool--description"></span>
+            <a href="" class="tool--contact" target="_blank" rel="noopener noreferrer">Contact the Developers</a>
+            <a href="" class="tool--github" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </li>
+    </template>
+
+    <script>
+        const request = new Request('./tools.json', {
+            method: 'GET'
+        });
+
+        fetch(request)
+            .then(response => response.json())
+            .then(tools => {
+
+                tools.forEach(tool => {
+                    const template = document.querySelector('#tool-template');
+
+                    const toolLink = template.content.querySelector('.tool--link');
+                    toolLink.innerHTML = tool.name;
+                    toolLink.href = tool.url;
+
+                    template.content.querySelector('.tool--description').innerText = tool.description;
+
+                    template.content.querySelector('.tool--contact').href = `mailto://${tool.contact}`;
+                    template.content.querySelector('.tool--github').href = tool.github;
+
+
+                    document.querySelector('#tools-list').appendChild(document.importNode(template.content, true));
+
+                });
+            });
+    </script>
+
+</body>
+</html>

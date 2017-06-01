@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Media Atom Maker",
+    "description": "Making Videos",
+    "url": "https://video.gutools.co.uk",
+    "github": "https://github.com/guardian/media-atom-maker",
+    "contact": "digitalcms.dev@theguardian.com"
+  },
+  {
+    "name": "Composer",
+    "description": "Making Articles",
+    "url": "https://composer.gutools.co.uk",
+    "github": "https://github.com/guardian/flexible-content",
+    "contact": "digitalcms.dev@theguardian.com"
+  }
+]
