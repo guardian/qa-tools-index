@@ -41,17 +41,20 @@
                 });
 
                 tools.forEach(tool => {
+                    const completeTool = Object.assign({
+                        contact: 'digitalcms.dev@theguardian.com'
+                    }, tool);
+
                     const template = document.querySelector('#tool-template');
 
                     const toolLink = template.content.querySelector('.tool--link');
-                    toolLink.innerHTML = tool.name;
-                    toolLink.href = tool.url;
+                    toolLink.innerHTML = completeTool.name;
+                    toolLink.href = completeTool.url;
 
-                    template.content.querySelector('.tool--description').innerText = tool.description;
+                    template.content.querySelector('.tool--description').innerText = completeTool.description;
 
-                    template.content.querySelector('.tool--contact').href = `mailto://${tool.contact}`;
-                    template.content.querySelector('.tool--github').href = tool.github;
-
+                    template.content.querySelector('.tool--contact').href = `mailto://${completeTool.contact}`;
+                    template.content.querySelector('.tool--github').href = completeTool.github;
 
                     document.querySelector('#tools-list').appendChild(document.importNode(template.content, true));
                 });
