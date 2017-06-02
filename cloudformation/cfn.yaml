@@ -8,7 +8,7 @@ Parameters:
   ToolsIndexUri:
     Type: String
     Description: URI of the Tools index page
-    Default: tools-index.gutools.co.uk
+    Default: tools.gutools.co.uk
 Resources:
   ToolsIndexBucket:
     Type: AWS::S3::Bucket
