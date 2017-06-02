@@ -9,7 +9,8 @@
     "name": "Composer",
     "description": "Making Articles",
     "url": "https://composer.gutools.co.uk",
-    "github": "https://github.com/guardian/flexible-content"
+    "github": "https://github.com/guardian/flexible-content",
+    "contact": "digitalcms.dev@theguardian.com"
   },
   {
     "name": "Grid",
@@ -17,5 +18,19 @@
     "url": "https://media.gutools.co.uk",
     "github": "https://github.com/guardian/grid",
     "contact": "thegrid.dev@theguardian.com"
-  }
+  },
+  {
+    "name": "Workflow",
+    "description": "Managing content through proudction",
+    "url": "https://workflow.gutools.co.uk",
+    "github": "https://github.com/guardian/workflow-frontend",
+    "contact": "cms.workflow@guardian.co.uk"
+  },
+  {
+    "name": "Facia",
+    "description": "Managing editorial fronts",
+    "url": "https://fronts.gutools.co.uk",
+    "github": "https://github.com/guardian/facia-tool",
+    "contact": "digitalcms.dev@theguardian.com"
+  },
 ]
