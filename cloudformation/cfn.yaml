@@ -5,20 +5,14 @@ Parameters:
     Type: String
     Description: IP range for the office
     Default: 77.91.248.0/21
-  ToolsIndexUri:
-    Type: String
-    Description: URI of the Tools index page
-    Default: tools.gutools.co.uk
 Resources:
   ToolsIndexBucket:
     Type: AWS::S3::Bucket
     DeletionPolicy: "Retain"
     Properties:
-      BucketName: {Ref: ToolsIndexUri}
       AccessControl: Private
       WebsiteConfiguration:
-        RedirectAllRequestsTo:
-          HostName: {Ref: ToolsIndexUri}
+        IndexDocument: "index.html"
       CorsConfiguration:
         CorsRules:
           - AllowedMethods:
@@ -44,3 +38,32 @@ Resources:
             IpAddress:
               aws:SourceIp:
               - {Ref: WhitelistedIp}
+  CircleCIUser:
+    Type: AWS::IAM::User
+    Properties:
+      Policies:
+        - PolicyName: CircleCIPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action:
+                  - "s3:PutObject"
+                  - "s3:PutObjectAcl"
+                  - "s3:ListBucket"
+                  - "s3:GetBucketLocation"
+                  - "s3:DeleteObject"
+                Resource:
+                  Fn::Join: ['', ['arn:aws:s3:::', {Ref: ToolsIndexBucket}, '/*' ]]
+  CircleCIKeys:
+      Type: "AWS::IAM::AccessKey"
+      Properties:
+        UserName: {"Ref": "CircleCIUser"}
+        Serial: 1
+Outputs:
+  CircleCIAWSID:
+    Value:
+      Ref: "CircleCIKeys"
+  CircleCIAWSSecret:
+    Value:
+      Fn::GetAtt: ["CircleCIKeys", "SecretAccessKey"]
