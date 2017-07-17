@@ -8,17 +8,14 @@ See it in action [here](https://tools-gutools-co-uk.s3-eu-west-1.amazonaws.com/i
 A static file in S3, generated in CI using `tools.json` as the list of Tools.
 
 ## Add a Tool
-Update [tools.json](./tools.json) adding a new object to the top level array.
+Run [`add-tool.js`](./add-tool.js) with the following parameters:
 
-```json
-  {
-    "id": "my-new-tool",
-    "name": "My New Tool",
-    "description": "new and shiny",
-    "prod": "https://new.gutools.co.uk",
-    "code": "https://new.code.dev-gutools.co.uk"
-  }
-```
+- `--name` the Tool name
+- `--description` a brief description of the Tool
+- `--url` the PROD url to the Tool
+-  (optional) `--code-url` the CODE url to the Tool
+
+This will update [`tools.json`](./tools.json).
 
 ## Deploying
 Merge to master.

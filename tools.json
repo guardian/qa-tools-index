@@ -1,45 +1,73 @@
 [
   {
-    "id": "media-atom-maker",
     "name": "Media Atom Maker",
     "description": "Making Videos",
     "prod": "https://video.gutools.co.uk",
     "code": "https://video.code.dev-gutools.co.uk"
   },
   {
-    "id": "composer",
     "name": "Composer",
     "description": "Making Articles",
     "prod": "https://composer.gutools.co.uk",
     "code": "https://composer.code.dev-gutools.co.uk"
   },
   {
-    "id": "grid",
     "name": "Grid",
     "description": "Managing Images",
     "prod": "https://media.gutools.co.uk",
     "code": "https://media.test.dev-gutools.co.uk"
-
   },
   {
-    "id": "workflow",
     "name": "Workflow",
-    "description": "Managing content through proudction",
+    "description": "Managing content through production",
     "prod": "https://workflow.gutools.co.uk",
     "code": "https://workflow.code.dev-gutools.co.uk"
   },
   {
-    "id": "facia",
     "name": "Facia",
     "description": "Managing editorial fronts",
     "prod": "https://fronts.gutools.co.uk",
     "code": "https://fronts.code.dev-gutools.co.uk"
   },
   {
-    "id": "atom-workshop",
     "name": "Atom Workshop",
     "description": "Creating simple Atoms",
-    "prod": "https://atomworkshop.gutools.co.uk/#",
-    "code": "https://atomworkshop.code.dev-gutools.co.uk/#"
+    "prod": "https://atomworkshop.gutools.co.uk",
+    "code": "https://atomworkshop.code.dev-gutools.co.uk"
+  },
+  {
+    "name": "Tag Manager",
+    "description": "Managing Tags",
+    "prod": "https://tagmanager.gutools.co.uk",
+    "code": "https://tagmanager.code.dev-gutools.co.uk"
+  },
+  {
+    "name": "Restorer",
+    "description": "Restoring Composer from 5 minute snapshots",
+    "prod": "https://restorer.gutools.co.uk",
+    "code": "https://restorer.code.dev-gutools.co.uk"
+  },
+  {
+    "name": "Explain Maker",
+    "description": "Managing Explainer Atoms",
+    "prod": "https://explainers.gutools.co.uk",
+    "code": "https://explainers.code.dev-gutools.co.uk"
+  },
+  {
+    "name": "Teleporter",
+    "description": "Jumping between Tools",
+    "prod": "https://sites.google.com/a/guardian.co.uk/composer-blog/section-three/introducing-gustaf"
+  },
+  {
+    "name": "Quiz Builder",
+    "description": "Building Quiz Atoms",
+    "prod": "https://quizzes.gutools.co.uk",
+    "code": "https://quizzes.code.dev-gutools.co.uk"
+  },
+  {
+    "name": "Viewer",
+    "description": "Previewing Composer Content",
+    "prod": "https://viewer.gutools.co.uk",
+    "code": "https://viewer.code.dev-gutools.co.uk"
   }
 ]

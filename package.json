@@ -19,7 +19,10 @@
     "build": "npm run test && node main.js",
     "deploy": "aws s3 sync build/ s3://tools-gutools-co-uk"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "argparse": "^1.0.9",
+    "jsonfile": "^3.0.1"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "jsonlint": "^1.6.2",
