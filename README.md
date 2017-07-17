@@ -2,7 +2,7 @@
 
 An index of all the Tools owned by Editorial Tools.
 
-See it in action [here](https://s3-eu-west-1.amazonaws.com/tools.gutools.co.uk/index.html).
+See it in action [here](https://tools-gutools-co-uk.s3-eu-west-1.amazonaws.com/index.html).
 
 ## How it works
 A static file in S3, generated in CI using `tools.json` as the list of Tools.

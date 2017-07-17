@@ -1,11 +1,18 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Tools Index
+Parameters:
+  ACMCertArn:
+    Description: ACM certificate ARN for CloudFront
+    Type: String
+  Domain:
+    Description: gutools.co.uk sub-domain to serve
+    Type: String
 Resources:
-  ToolsIndexBucket:
+  StaticContentBucket:
     Type: AWS::S3::Bucket
     DeletionPolicy: "Retain"
     Properties:
-      BucketName: "tools.gutools.co.uk"
+      BucketName: "tools-gutools-co-uk"
       AccessControl: Private
       WebsiteConfiguration:
         IndexDocument: "index.html"
@@ -17,11 +24,11 @@ Resources:
               - "*"
             AllowedHeaders:
               - "*"
-  ToolsIndexdBucketPolicy:
+  StaticContentBucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
       Bucket:
-        Ref: ToolsIndexBucket
+        Ref: StaticContentBucket
       PolicyDocument:
         Id: ToolsIndexdBucketPolicy
         Statement:
@@ -29,7 +36,30 @@ Resources:
           Effect: Allow
           Principal: "*"
           Resource:
-            Fn::Join: ['', ['arn:aws:s3:::', {Ref: ToolsIndexBucket}, '/*' ]]
+            Fn::Join: ['', ['arn:aws:s3:::', {Ref: StaticContentBucket}, '/*' ]]
+  CFDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Aliases:
+        - !Ref 'Domain'
+        DefaultCacheBehavior:
+          ForwardedValues:
+            QueryString: "false"
+          TargetOriginId: "tools-index"
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: "index.html"
+        Enabled: "true"
+        Origins:
+        - DomainName:
+            Fn::Join: ['', [{Ref: StaticContentBucket}, '.s3.amazonaws.com' ]]
+          Id: "tools-index"
+          CustomOriginConfig:
+            OriginProtocolPolicy: https-only
+        ViewerCertificate:
+          AcmCertificateArn: !Ref 'ACMCertArn'
+          MinimumProtocolVersion: TLSv1
+          SslSupportMethod: sni-only
   CircleCIUser:
     Type: AWS::IAM::User
     Properties:
@@ -45,8 +75,8 @@ Resources:
                   - "s3:ListObjects"
                   - "s3:DeleteObject"
                 Resource:
-                  - Fn::Join: ['', ['arn:aws:s3:::', {Ref: ToolsIndexBucket} ]]
-                  - Fn::Join: ['', ['arn:aws:s3:::', {Ref: ToolsIndexBucket}, '/*' ]]
+                  - Fn::Join: ['', ['arn:aws:s3:::', {Ref: StaticContentBucket} ]]
+                  - Fn::Join: ['', ['arn:aws:s3:::', {Ref: StaticContentBucket}, '/*' ]]
   CircleCIKeys:
       Type: "AWS::IAM::AccessKey"
       Properties:

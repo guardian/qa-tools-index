@@ -17,7 +17,7 @@
     "lint": "jsonlint tools.json --quiet",
     "test": "npm run lint",
     "build": "npm run test && node main.js",
-    "deploy": "aws s3 sync build/ s3://tools.gutools.co.uk"
+    "deploy": "aws s3 sync build/ s3://tools-gutools-co-uk"
   },
   "devDependencies": {},
   "dependencies": {
