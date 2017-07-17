@@ -49,12 +49,12 @@ Resources:
               - Effect: "Allow"
                 Action:
                   - "s3:PutObject"
-                  - "s3:PutObjectAcl"
                   - "s3:ListBucket"
-                  - "s3:GetBucketLocation"
+                  - "s3:ListObjects"
                   - "s3:DeleteObject"
                 Resource:
-                  Fn::Join: ['', ['arn:aws:s3:::', {Ref: ToolsIndexBucket}, '/*' ]]
+                  - Fn::Join: ['', ['arn:aws:s3:::', {Ref: ToolsIndexBucket} ]]
+                  - Fn::Join: ['', ['arn:aws:s3:::', {Ref: ToolsIndexBucket}, '/*' ]]
   CircleCIKeys:
       Type: "AWS::IAM::AccessKey"
       Properties:
