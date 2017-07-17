@@ -1,0 +1,28 @@
+{
+  "name": "ed-tools-index",
+  "description": "An index of all the Tools owned by Editorial Tools.",
+  "version": "0.0.0",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guardian/ed-tools-index.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guardian/ed-tools-index/issues"
+  },
+  "homepage": "https://github.com/guardian/ed-tools-index#readme",
+  "scripts": {
+    "lint": "jsonlint tools.json --quiet",
+    "test": "npm run lint",
+    "build": "npm run test && node main.js",
+    "deploy": "aws s3 sync build/ s3://editorlal-tools-index-prod-toolsindexbucket-jvki8urq2rbw"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "jsonlint": "^1.6.2",
+    "mkdirp": "^0.5.1"
+  }
+}
