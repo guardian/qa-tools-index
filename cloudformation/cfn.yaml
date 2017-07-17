@@ -1,15 +1,11 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Tools Index
-Parameters:
-  WhitelistedIp:
-    Type: String
-    Description: IP range for the office
-    Default: 77.91.248.0/21
 Resources:
   ToolsIndexBucket:
     Type: AWS::S3::Bucket
     DeletionPolicy: "Retain"
     Properties:
+      BucketName: "tools.gutools.co.uk"
       AccessControl: Private
       WebsiteConfiguration:
         IndexDocument: "index.html"
@@ -34,10 +30,6 @@ Resources:
           Principal: "*"
           Resource:
             Fn::Join: ['', ['arn:aws:s3:::', {Ref: ToolsIndexBucket}, '/*' ]]
-          Condition:
-            IpAddress:
-              aws:SourceIp:
-              - {Ref: WhitelistedIp}
   CircleCIUser:
     Type: AWS::IAM::User
     Properties:
