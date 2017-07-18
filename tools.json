@@ -69,5 +69,11 @@
     "description": "Previewing Composer Content",
     "prod": "https://viewer.gutools.co.uk",
     "code": "https://viewer.code.dev-gutools.co.uk"
+  },
+  {
+    "name": "S3 Uploader",
+    "description": "A place to upload files for use in Content",
+    "prod": "https://s3-uploader.gutools.co.uk",
+    "code": "https://s3-uploader.code.dev-gutools.co.uk"
   }
 ]
