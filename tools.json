@@ -75,5 +75,37 @@
     "description": "A place to upload files for use in Content",
     "prod": "https://s3-uploader.gutools.co.uk",
     "code": "https://s3-uploader.code.dev-gutools.co.uk"
+  },
+  {
+    "name": "Permissions",
+    "description": "Managing permission to features in our Tools",
+    "prod": "https://permissions.gutools.co.uk",
+    "code": "https://permissions.code.dev-gutools.co.uk"
+  },
+  {
+    "name": "Docs",
+    "description": "Technical material for our Tools",
+    "prod": "https://docs.gutools.co.uk"
+  },
+  {
+    "name": "Production Monitoring",
+    "description": "Testing the Guardian's ability to publish",
+    "prod": "https://prodmon.gutools.co.uk"
+  },
+  {
+    "name": "Radiator",
+    "description": "Graphing various application performance metrics",
+    "prod": "https://radiators.gutools.co.uk"
+  },
+  {
+    "name": "Screenshort",
+    "description": "A tool to create images for use on Twitter, Instagram and Facebook",
+    "prod": "https://interactive.guim.co.uk/tools/screenshort"
+  },
+  {
+    "name": "Targetting",
+    "description": "Manages associations between tags and embeds/targeted campaigns",
+    "prod": "https://targeting.gutools.co.uk",
+    "code": "https://targeting.code.dev-gutools.co.uk"
   }
 ]
