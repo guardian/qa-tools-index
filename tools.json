@@ -103,7 +103,7 @@
     "prod": "https://interactive.guim.co.uk/tools/screenshort"
   },
   {
-    "name": "Targetting",
+    "name": "Targeting",
     "description": "Manages associations between tags and embeds/targeted campaigns",
     "prod": "https://targeting.gutools.co.uk",
     "code": "https://targeting.code.dev-gutools.co.uk"
