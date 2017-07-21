@@ -3,78 +3,117 @@
     "name": "Media Atom Maker",
     "description": "Making Videos",
     "prod": "https://video.gutools.co.uk",
-    "code": "https://video.code.dev-gutools.co.uk"
+    "code": "https://video.code.dev-gutools.co.uk",
+    "keywords": [
+      "video", "media", "atom", "pluto"
+    ]
   },
   {
     "name": "Composer",
     "description": "Making Articles",
     "prod": "https://composer.gutools.co.uk",
-    "code": "https://composer.code.dev-gutools.co.uk"
+    "code": "https://composer.code.dev-gutools.co.uk",
+    "keywords": [
+      "cms", "article"
+    ]
   },
   {
     "name": "Grid",
     "description": "Managing Images",
     "prod": "https://media.gutools.co.uk",
-    "code": "https://media.test.dev-gutools.co.uk"
+    "code": "https://media.test.dev-gutools.co.uk",
+    "keywords": [
+      "image", "picture"
+    ]
   },
   {
     "name": "Workflow",
     "description": "Managing content through production",
     "prod": "https://workflow.gutools.co.uk",
-    "code": "https://workflow.code.dev-gutools.co.uk"
+    "code": "https://workflow.code.dev-gutools.co.uk",
+    "keywords": [
+      "production", "tracking"
+    ]
   },
   {
     "name": "Facia",
     "description": "Managing editorial fronts",
     "prod": "https://fronts.gutools.co.uk",
-    "code": "https://fronts.code.dev-gutools.co.uk"
+    "code": "https://fronts.code.dev-gutools.co.uk",
+    "keywords": [
+      "fronts"
+    ]
   },
   {
     "name": "Atom Workshop",
     "description": "Creating simple Atoms",
     "prod": "https://atomworkshop.gutools.co.uk",
-    "code": "https://atomworkshop.code.dev-gutools.co.uk"
+    "code": "https://atomworkshop.code.dev-gutools.co.uk",
+    "keywords": [
+      "atom", "cta"
+    ]
   },
   {
     "name": "Tag Manager",
     "description": "Managing Tags",
     "prod": "https://tagmanager.gutools.co.uk",
-    "code": "https://tagmanager.code.dev-gutools.co.uk"
+    "code": "https://tagmanager.code.dev-gutools.co.uk",
+    "keywords": [
+      "tags"
+    ]
   },
   {
     "name": "Restorer",
     "description": "Restoring Composer from 5 minute snapshots",
     "prod": "https://restorer.gutools.co.uk",
-    "code": "https://restorer.code.dev-gutools.co.uk"
+    "code": "https://restorer.code.dev-gutools.co.uk",
+    "keywords": [
+      "restore", "snapshot"
+    ]
   },
   {
     "name": "Explain Maker",
     "description": "Managing Explainer Atoms",
     "prod": "https://explainers.gutools.co.uk",
-    "code": "https://explainers.code.dev-gutools.co.uk"
+    "code": "https://explainers.code.dev-gutools.co.uk",
+    "keywords": [
+      "explainers"
+    ]
   },
   {
     "name": "Teleporter",
     "description": "Jumping between Tools",
-    "prod": "https://sites.google.com/a/guardian.co.uk/composer-blog/section-three/introducing-gustaf"
+    "prod": "https://sites.google.com/a/guardian.co.uk/composer-blog/section-three/introducing-gustaf",
+    "keywords": [
+      "gustaf"
+    ]
   },
   {
     "name": "Quiz Builder",
     "description": "Building Quiz Atoms",
     "prod": "https://quizzes.gutools.co.uk",
-    "code": "https://quizzes.code.dev-gutools.co.uk"
+    "code": "https://quizzes.code.dev-gutools.co.uk",
+    "keywords": [
+      "quiz"
+    ]
   },
   {
     "name": "Viewer",
     "description": "Previewing Composer Content",
     "prod": "https://viewer.gutools.co.uk",
-    "code": "https://viewer.code.dev-gutools.co.uk"
+    "code": "https://viewer.code.dev-gutools.co.uk",
+    "keywords": [
+      "preview"
+    ]
   },
   {
     "name": "S3 Uploader",
     "description": "A place to upload files for use in Content",
     "prod": "https://s3-uploader.gutools.co.uk",
-    "code": "https://s3-uploader.code.dev-gutools.co.uk"
+    "code": "https://s3-uploader.code.dev-gutools.co.uk",
+    "keywords": [
+      "upload"
+    ]
   },
   {
     "name": "Permissions",
@@ -95,12 +134,18 @@
   {
     "name": "Radiator",
     "description": "Graphing various application performance metrics",
-    "prod": "https://radiators.gutools.co.uk"
+    "prod": "https://radiators.gutools.co.uk",
+    "keywords": [
+      "metrics"
+    ]
   },
   {
     "name": "Screenshort",
     "description": "A tool to create images for use on Twitter, Instagram and Facebook",
-    "prod": "https://interactive.guim.co.uk/tools/screenshort"
+    "prod": "https://interactive.guim.co.uk/tools/screenshort",
+    "keywords": [
+      "social"
+    ]
   },
   {
     "name": "Targetting",
