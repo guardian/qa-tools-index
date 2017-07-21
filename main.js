@@ -21,6 +21,8 @@ const $ = cheerio.load(template);
 tools.forEach(tool => {
     const toolId = tool.name.toLowerCase().replace(/ /g, '-');
 
+    const keywords = tool.keywords || [];
+
     const codeHtml = !tool.code
         ? `<span></span>`
         : `<button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#${toolId}-extras" aria-expanded="false" aria-controls="${toolId}-extras">
@@ -33,7 +35,7 @@ tools.forEach(tool => {
             </div>`;
 
     const toolHtml = `        
-        <div class="card" data-tool-id="${toolId}">
+        <div class="card editorial-tool" data-tool-id="${toolId}" data-tool-keywords='${JSON.stringify(keywords)}'">
           <h3 class="card-header">${tool.name}</h3>
           <div class="card-block">
             <p class="card-text">${tool.description}</p>
