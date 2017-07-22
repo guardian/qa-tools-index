@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/guardian/ed-tools-index.svg?style=svg)](https://circleci.com/gh/guardian/ed-tools-index)
+
 # Editorial Tools Index
 
 An index of all the Tools owned by Editorial Tools.
