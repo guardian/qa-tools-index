@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/guardian/ed-tools-index.svg?style=svg)](https://circleci.com/gh/guardian/ed-tools-index)
+[![CircleCI](https://circleci.com/gh/guardian/ed-tools-index.svg?style=svg&circle-token=f61081b7da85b38e752145d012e968da11e5ec5d)](https://circleci.com/gh/guardian/ed-tools-index)
 
 # Editorial Tools Index
 
