@@ -36,8 +36,8 @@
     ]
   },
   {
-    "name": "Facia",
-    "description": "Managing editorial fronts",
+    "name": "Fronts Tool",
+    "description": "Manages fronts and breaking news",
     "prod": "https://fronts.gutools.co.uk",
     "code": "https://fronts.code.dev-gutools.co.uk",
     "keywords": [
