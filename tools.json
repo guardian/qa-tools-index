@@ -152,5 +152,14 @@
     "description": "Manages associations between tags and embeds/targeted campaigns",
     "prod": "https://targeting.gutools.co.uk",
     "code": "https://targeting.code.dev-gutools.co.uk"
+  },
+  {
+    "name": "Story Packages",
+    "description": "Manages story packages",
+    "prod": "https://packages.gutools.co.uk",
+    "code": "https://packages.code.dev-gutools.co.uk",
+    "keywords": [
+      "packages"
+    ]
   }
 ]
