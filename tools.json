@@ -161,5 +161,11 @@
     "keywords": [
       "packages"
     ]
+  },
+  {
+    "name": "Editorial Production Metrics",
+    "description": "Metrics around production of content",
+    "prod": "https://productionmetrics.gutools.co.uk",
+    "code": "https://productionmetrics.code.dev-gutools.co.uk"
   }
 ]
