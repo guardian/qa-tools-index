@@ -167,5 +167,15 @@
     "description": "Metrics around production of content",
     "prod": "https://productionmetrics.gutools.co.uk",
     "code": "https://productionmetrics.code.dev-gutools.co.uk"
+  },
+  {
+    "name": "Help",
+    "description": "A set of Help pages for our Tools",
+    "prod": "https://help.gutools.co.uk",
+    "keywords": [
+      "help",
+      "bug",
+      "howto"
+    ]
   }
 ]
