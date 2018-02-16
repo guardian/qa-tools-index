@@ -177,5 +177,14 @@
       "bug",
       "howto"
     ]
+  },
+  {
+    "name": "Composer Secondary",
+    "description": "A secondary instance of Composer *FOR EMERGENCY USE ONLY*",
+    "prod": "https://composer-secondary.gutools.co.uk",
+    "code": "https://composer-secondary.code.dev-gutools.co.uk",
+    "keywords": [
+      "cms", "article", "secondary"
+    ]
   }
 ]
