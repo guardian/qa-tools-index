@@ -186,5 +186,13 @@
     "keywords": [
       "cms", "article", "secondary"
     ]
+  },
+  {
+    "name": "Crossword Status Checker",
+    "description": "Check on the status of a crossword",
+    "prod": "http://crossword-status-checker-prod.s3-website-eu-west-1.amazonaws.com/",
+    "keywords": [
+      "crosswords", "troubleshooting"
+    ]
   }
 ]
