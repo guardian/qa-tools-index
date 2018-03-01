@@ -72,15 +72,6 @@
     ]
   },
   {
-    "name": "Explain Maker",
-    "description": "Managing Explainer Atoms",
-    "prod": "https://explainers.gutools.co.uk",
-    "code": "https://explainers.code.dev-gutools.co.uk",
-    "keywords": [
-      "explainers"
-    ]
-  },
-  {
     "name": "Teleporter",
     "description": "Jumping between Tools",
     "prod": "https://sites.google.com/a/guardian.co.uk/composer-blog/section-three/introducing-gustaf",
