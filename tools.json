@@ -4,6 +4,7 @@
     "description": "Making Videos",
     "prod": "https://video.gutools.co.uk",
     "code": "https://video.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/media-atom-maker",
     "keywords": [
       "video", "media", "atom", "pluto"
     ]
@@ -13,6 +14,7 @@
     "description": "Making Articles",
     "prod": "https://composer.gutools.co.uk",
     "code": "https://composer.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/flexible-content",
     "keywords": [
       "cms", "article"
     ]
@@ -22,6 +24,7 @@
     "description": "Managing Images",
     "prod": "https://media.gutools.co.uk",
     "code": "https://media.test.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/grid",
     "keywords": [
       "image", "picture"
     ]
@@ -31,6 +34,7 @@
     "description": "Managing content through production",
     "prod": "https://workflow.gutools.co.uk",
     "code": "https://workflow.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/workflow",
     "keywords": [
       "production", "tracking"
     ]
@@ -40,6 +44,7 @@
     "description": "Manages fronts and breaking news",
     "prod": "https://fronts.gutools.co.uk",
     "code": "https://fronts.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/facia-tool",
     "keywords": [
       "fronts"
     ]
@@ -49,6 +54,7 @@
     "description": "Creating simple Atoms",
     "prod": "https://atomworkshop.gutools.co.uk",
     "code": "https://atomworkshop.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/atom-workshop",
     "keywords": [
       "atom", "cta"
     ]
@@ -58,6 +64,7 @@
     "description": "Managing Tags",
     "prod": "https://tagmanager.gutools.co.uk",
     "code": "https://tagmanager.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/tagmanager",
     "keywords": [
       "tags"
     ]
@@ -67,6 +74,7 @@
     "description": "Restoring Composer from 5 minute snapshots",
     "prod": "https://restorer.gutools.co.uk",
     "code": "https://restorer.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/composer-restorer",
     "keywords": [
       "restore", "snapshot"
     ]
@@ -75,6 +83,7 @@
     "name": "Teleporter",
     "description": "Jumping between Tools",
     "prod": "https://sites.google.com/a/guardian.co.uk/composer-blog/section-three/introducing-gustaf",
+    "repository": "https://github.com/guardian/teleporter",
     "keywords": [
       "gustaf"
     ]
@@ -84,6 +93,7 @@
     "description": "Building Quiz Atoms",
     "prod": "https://quizzes.gutools.co.uk",
     "code": "https://quizzes.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/ten-four_quiz-builder",
     "keywords": [
       "quiz"
     ]
@@ -93,6 +103,7 @@
     "description": "Previewing Composer Content",
     "prod": "https://viewer.gutools.co.uk",
     "code": "https://viewer.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/editorial-viewer",
     "keywords": [
       "preview"
     ]
@@ -102,6 +113,7 @@
     "description": "A place to upload files for use in Content",
     "prod": "https://s3-uploader.gutools.co.uk",
     "code": "https://s3-uploader.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/s3-upload",
     "keywords": [
       "upload"
     ]
@@ -110,22 +122,26 @@
     "name": "Permissions",
     "description": "Managing permission to features in our Tools",
     "prod": "https://permissions.gutools.co.uk",
-    "code": "https://permissions.code.dev-gutools.co.uk"
+    "code": "https://permissions.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/permissions"
   },
   {
     "name": "Docs",
     "description": "Technical material for our Tools",
-    "prod": "https://docs.gutools.co.uk"
+    "prod": "https://docs.gutools.co.uk",
+    "repository": "https://github.com/guardian/editorial-tools-docs"
   },
   {
     "name": "Production Monitoring",
     "description": "Testing the Guardian's ability to publish",
-    "prod": "https://prodmon.gutools.co.uk"
+    "prod": "https://prodmon.gutools.co.uk",
+    "repository": "https://github.com/guardian/editorial-tools-production-monitoring"
   },
   {
     "name": "Radiator",
     "description": "Graphing various application performance metrics",
     "prod": "https://radiators.gutools.co.uk",
+    "repository": "https://github.com/guardian/radiator",
     "keywords": [
       "metrics"
     ]
@@ -134,6 +150,7 @@
     "name": "Screenshort",
     "description": "A tool to create images for use on Twitter, Instagram and Facebook",
     "prod": "https://interactive.guim.co.uk/tools/screenshort",
+    "repository": "https://github.com/guardian/screenshort",
     "keywords": [
       "social"
     ]
@@ -142,13 +159,15 @@
     "name": "Targeting",
     "description": "Manages associations between tags and embeds/targeted campaigns",
     "prod": "https://targeting.gutools.co.uk",
-    "code": "https://targeting.code.dev-gutools.co.uk"
+    "code": "https://targeting.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/targeting"
   },
   {
     "name": "Story Packages",
     "description": "Manages story packages",
     "prod": "https://packages.gutools.co.uk",
     "code": "https://packages.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/story-package-manager",
     "keywords": [
       "packages"
     ]
@@ -157,12 +176,14 @@
     "name": "Editorial Production Metrics",
     "description": "Metrics around production of content",
     "prod": "https://productionmetrics.gutools.co.uk",
-    "code": "https://productionmetrics.code.dev-gutools.co.uk"
+    "code": "https://productionmetrics.code.dev-gutools.co.uk",
+    "repository": "https://github.com/guardian/editorial-production-metrics"
   },
   {
     "name": "Help",
     "description": "A set of Help pages for our Tools",
     "prod": "https://help.gutools.co.uk",
+    "repository": "https://github.com/guardian/editorial-tools-help",
     "keywords": [
       "help",
       "bug",
@@ -182,6 +203,7 @@
     "name": "Crossword Status Checker",
     "description": "Check on the status of a crossword",
     "prod": "http://crossword-status-checker-prod.s3-website-eu-west-1.amazonaws.com/",
+    "repository": "https://github.com/guardian/crossword-status-checker",
     "keywords": [
       "crosswords", "troubleshooting"
     ]

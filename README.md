@@ -22,6 +22,7 @@ A Tool has the following definition:
 - `description`: _STRING_ a description of the Tool
 - `prod`: _STRING_ the url to the PROD environment
 - `code`: _STRING_ (optional) the url to the CODE environment
+- `repository`: _STRING_ (optional) the url to the (GitHub) repository
 - `keywords`: _ARRAY[STRING]_ (optional) a set of keywords for search
 
 ## Deploying
