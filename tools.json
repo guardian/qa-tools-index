@@ -207,5 +207,15 @@
     "keywords": [
       "crosswords", "troubleshooting"
     ]
+  },
+  {
+    "name": "Mod Tools",
+    "description": "Moderate comments and users",
+    "prod": "https://modtools.discussion.gutools.co.uk",
+    "code": "https://modtools.discussion.code.dev-gutools.co.uk/",
+    "repository": "https://github.com/guardian/discussion-modtools",
+    "keywords": [
+      "discussions", "moderation"
+    ]
   }
 ]
