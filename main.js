@@ -16,55 +16,103 @@ tools.sort((a, b) => {
 
 const template = fs.readFileSync('./template.html', 'utf8');
 
-const $ = cheerio.load(template);
+function getIndexHtml() {
+    const $ = cheerio.load(template);
 
-tools.forEach(tool => {
-    const toolId = tool.name.toLowerCase().replace(/ /g, '-');
+    tools.forEach(tool => {
+        const toolId = tool.name.toLowerCase().replace(/ /g, '-');
 
-    const keywords = tool.keywords || [];
+        const keywords = tool.keywords || [];
 
-    const codeHtml = !tool.code
-        ? `<span></span>`
-        : `<a href="${tool.code}" target="_blank" class="btn btn-secondary">Open CODE</a>`;
-    const repositoryHtml = !tool.repository
-        ? `<span></span>`
-        : `<a href="${tool.repository}" target="_blank" class="btn btn-secondary">Open Repository</a>`;
+        const codeHtml = !tool.code
+            ? `<span></span>`
+            : `<a href="${tool.code}" target="_blank" class="btn btn-secondary">Open CODE</a>`;
+        const repositoryHtml = !tool.repository
+            ? `<span></span>`
+            : `<a href="${tool.repository}" target="_blank" class="btn btn-secondary">Open Repository</a>`;
 
-    const extrasHtml = !tool.code && !tool.repository
-        ? `<span></span>`
-        : `<button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#${toolId}-extras" aria-expanded="false" aria-controls="${toolId}-extras">
-                <i class="fa fa-chevron-circle-down"></i>
-           </button>
-           <div class="collapse" id="${toolId}-extras">
-             <div class="card card-block card-extras">
-               ${codeHtml}
-               ${repositoryHtml}
-             </div>
-           </div>`;
+        const extrasHtml = !tool.code && !tool.repository
+            ? `<span></span>`
+            : `<button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#${toolId}-extras" aria-expanded="false" aria-controls="${toolId}-extras">
+                    <i class="fa fa-chevron-circle-down"></i>
+               </button>
+               <div class="collapse" id="${toolId}-extras">
+                 <div class="card card-block card-extras">
+                   ${codeHtml}
+                   ${repositoryHtml}
+                 </div>
+               </div>`;
 
-    const toolHtml = `        
-      <div class="card editorial-tool" data-tool-id="${toolId}" data-tool-keywords='${JSON.stringify(keywords)}'">
-          <h3 class="card-header">${tool.name}</h3>
-          <div class="card-block">
-            <p class="card-text">${tool.description}</p>
-            <a href="${tool.prod}" target="_blank" class="btn btn-primary">Open</a>
-            ${extrasHtml}
+        const toolHtml = `        
+          <div class="card editorial-tool" data-tool-id="${toolId}" data-tool-keywords='${JSON.stringify(keywords)}'">
+              <h3 class="card-header">${tool.name}</h3>
+              <div class="card-block">
+                <p class="card-text">${tool.description}</p>
+                <a href="${tool.prod}" target="_blank" class="btn btn-primary">Open</a>
+                ${extrasHtml}
+              </div>
           </div>
-      </div>
-    `;
+        `;
 
-    $('.tools-list').append(toolHtml);
-});
+        $('.tools-list').append(toolHtml);
+    });
 
+    return $;
+}
+
+function getCodeHtml() {
+    const $ = cheerio.load(template);
+
+    tools.filter(_ => _.code).forEach(tool => {
+        const toolId = tool.name.toLowerCase().replace(/ /g, '-');
+
+        const keywords = tool.keywords || [];
+
+        const repositoryHtml = !tool.repository
+            ? `<span></span>`
+            : `<a href="${tool.repository}" target="_blank" class="btn btn-secondary">Open Repository</a>`;
+
+        const toolHtml = `        
+          <div class="card editorial-tool" data-tool-id="${toolId}" data-tool-keywords='${JSON.stringify(keywords)}'">
+              <h3 class="card-header">${tool.name}</h3>
+              <div class="card-block">
+                <p class="card-text">${tool.description}</p>
+                <a href="${tool.code}" target="_blank" class="btn btn-primary">Open CODE</a>
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#${toolId}-extras" aria-expanded="false" aria-controls="${toolId}-extras">
+                    <i class="fa fa-chevron-circle-down"></i>
+               </button>
+               <div class="collapse" id="${toolId}-extras">
+                 <div class="card card-block card-extras">
+                   ${repositoryHtml}
+                 </div>
+               </div>
+              </div>
+          </div>
+        `;
+
+        $('.tools-list').append(toolHtml);
+    });
+
+    return $;
+}
 
 mkdirp('build', (dirErr) => {
     if (dirErr) throw dirErr;
 
-    const builtFile = 'build/index.html';
+    const indexHtml = getIndexHtml();
+    const indexFile = 'build/index.html';
 
-    fs.writeFile(builtFile, $.html(), (err) => {
+    fs.writeFile(indexFile, indexHtml.html(), (err) => {
         if (err) throw err;
-        console.log(`${builtFile} successfully created`);
+        console.log(`${indexFile} successfully created`);
+    });
+
+    const codeHtml = getCodeHtml();
+    const codeFile = 'build/code.html';
+
+    fs.writeFile(codeFile, codeHtml.html(), (err) => {
+        if (err) throw err;
+        console.log(`${codeFile} successfully created`);
     });
 });
 
