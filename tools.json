@@ -177,7 +177,11 @@
     "description": "Metrics around production of content",
     "prod": "https://productionmetrics.gutools.co.uk",
     "code": "https://productionmetrics.code.dev-gutools.co.uk",
-    "repository": "https://github.com/guardian/editorial-production-metrics"
+    "repository": "https://github.com/guardian/editorial-production-metrics",
+    "keywords": [
+      "metrics",
+      "tracking"
+    ]
   },
   {
     "name": "Help",
