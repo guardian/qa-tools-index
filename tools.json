@@ -140,7 +140,7 @@
   {
     "name": "Radiator",
     "description": "Graphing various application performance metrics",
-    "prod": "https://radiators.gutools.co.uk",
+    "prod": "https://gu-radiator.appspot.com",
     "repository": "https://github.com/guardian/radiator",
     "keywords": [
       "metrics"
