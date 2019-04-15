@@ -126,12 +126,6 @@
     "repository": "https://github.com/guardian/permissions"
   },
   {
-    "name": "Docs",
-    "description": "Technical material for our Tools",
-    "prod": "https://docs.gutools.co.uk",
-    "repository": "https://github.com/guardian/editorial-tools-docs"
-  },
-  {
     "name": "Production Monitoring",
     "description": "Testing the Guardian's ability to publish",
     "prod": "https://prodmon.gutools.co.uk",
