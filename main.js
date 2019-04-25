@@ -38,6 +38,10 @@ function getIndexHtml() {
             ? `<span></span>`
             : `<a href="${tool.codeLogs}" target="_blank" class="btn btn-secondary">Open CODE logs</a>`;
 
+        const awsAccount = !tool.awsAccount
+            ? `<span></span>`
+            : `AWS Account: <code>${tool.awsAccount}</code>`;
+
         const extrasHtml = !tool.code && !tool.repository
             ? `<span></span>`
             : `<button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#${toolId}-extras" aria-expanded="false" aria-controls="${toolId}-extras">
@@ -49,6 +53,7 @@ function getIndexHtml() {
                    ${repositoryHtml}
                    ${prodLogs}
                    ${codeLogs}
+                   ${awsAccount}
                  </div>
                </div>`;
 
