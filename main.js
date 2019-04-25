@@ -38,9 +38,9 @@ function getIndexHtml() {
             ? `<span></span>`
             : `<a href="${tool.codeLogs}" target="_blank" class="btn btn-secondary">Open CODE logs</a>`;
 
-        const janusLink = !tool.awsAccount
+        const awsAccount = !tool.awsAccount
             ? `<span></span>`
-            : `<a href="https://janus.gutools.co.uk/consoleUrl?permissionId=${tool.awsAccount}-dev" target="_blank" class="btn btn-secondary">Open ${tool.awsAccount} AWS account</a>`;
+            : `AWS Account: <code>${tool.awsAccount}</code>`;
 
         const extrasHtml = !tool.code && !tool.repository
             ? `<span></span>`
@@ -53,7 +53,7 @@ function getIndexHtml() {
                    ${repositoryHtml}
                    ${prodLogs}
                    ${codeLogs}
-                   ${janusLink}
+                   ${awsAccount}
                  </div>
                </div>`;
 
