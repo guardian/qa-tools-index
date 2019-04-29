@@ -264,5 +264,14 @@
     "keywords": [
       "discussions", "moderation"
     ]
+  },
+  {
+    "name": "YouTube PfP Player Demo",
+    "description": "A playground to test the YouTube PfP player",
+    "prod": "https://youtube-pfp-player-demo.gutools.co.uk",
+    "repository": "https://github.com/guardian/youtube-pfp-player-demo",
+    "keywords": [
+      "video", "youtube", "pfp"
+    ]
   }
 ]
