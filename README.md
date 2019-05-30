@@ -1,8 +1,6 @@
-# Editorial Tools Index
+# QA Tools Index
 
-An index of all the Tools owned by Editorial Tools.
-
-See it in action [here](https://tools-gutools-co-uk.s3-eu-west-1.amazonaws.com/index.html).
+An index of all the Tools owned by the QA Team. Lovingly ripped off from the ed-tools-index.
 
 ## How it works
 A static file in S3, generated in CI using `tools.json` as the list of Tools. The static file is generated during build.
