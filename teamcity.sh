@@ -18,7 +18,7 @@ build() {
 }
 
 deploy() {
-    aws s3 sync build/ s3://tools-gutools-co-uk
+    aws s3 sync build/ s3://qa-tools-gutools-co-uk
 
     aws cloudfront create-invalidation \
         --distribution-id ${CLOUDFRONT_DISTRIBUTION} \

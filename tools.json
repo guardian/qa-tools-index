@@ -1,9 +1,8 @@
 [
   {
     "name": "PRBuilds",
-    "description": "Test your app as if it was in production, right on your pull request.",
+    "description": "PRBuilds records the production runtime performance characteristics of webapps, and stamps the results right on your GitHub PRs.",
     "repository": "https://github.com/guardian/prbuilds",
-    "prod": "https://video.gutools.co.uk",
     "awsAccount": "frontend",
     "keywords": [
       "testing"
