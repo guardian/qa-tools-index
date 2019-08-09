@@ -10,7 +10,7 @@ A static file in S3, generated in CI using `tools.json` as the list of Tools. Th
 - `grunt`
 
 
-## Add a Tool
+## Adding Tools
 Edit [`tools.json`](./tools.json).
 
 A Tool has the following definition:
